@@ -45,7 +45,7 @@ st.markdown(
     }
      .logo {
           display: flex;
-          margin-left: auto;
+          margin-left:10px;
           margin-right: auto;
           width: 20%;
     }
