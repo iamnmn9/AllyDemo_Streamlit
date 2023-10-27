@@ -84,16 +84,16 @@ st.markdown(
 # Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.image(ally_logo, use_column_width=False, width=150, key="ally-logo")
+st.image(ally_logo, use_column_width=False, width=150, caption="Ally Logo")
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 st.markdown("<div class='chatbox'>", unsafe_allow_html=True)
 
 # Chat Conversation
-user_input = st.text_input("You: ", key="user-input")
+user_input = st.text_input("You: ")
 
-if st.button("Send", key="submit-button"):
+if st.button("Send"):
     st.markdown("<div class='user-message'>You: {}</div>".format(user_input), unsafe_allow_html=True)
     st.markdown("<div class='bot-message'>Ally: Hi there! How can I assist you today?</div>", unsafe_allow_html=True)
 
