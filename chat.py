@@ -5,7 +5,7 @@ from PIL import Image
 st.set_page_config(
     page_title="ALLY COPILOT DEMO",
     page_icon="🦋",
-    layout="centered",  # Center the content
+    layout="wide",  # Wide layout for the entire page
 )
 
 # Custom CSS for Chatbox Style
