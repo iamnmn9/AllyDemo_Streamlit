@@ -3,7 +3,7 @@ from PIL import Image
 
 # Page Configuration
 st.set_page_config(
-    page_title="Ally: Your copilot",
+    page_title="ALLY",
     page_icon="🦋",
     layout="centered",  # Center the content
 )
@@ -29,7 +29,7 @@ st.markdown(
         width: 100%;
     }
     .user-message {
-        background-color:  #8dcfe3; /* Grey background for user messages */
+        background-color:  #b9e2eb; /* Grey background for user messages */
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
@@ -44,7 +44,7 @@ st.markdown(
     }
     .logo {
         max-width: 100%; /* Make the logo responsive */
-        margin-bottom: 10px;
+        margin-bottom: 1px;
     }
     </style>
     """,
@@ -54,16 +54,16 @@ st.markdown(
 # Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.markdown("<style>.logo { max-width: 150px; margin-bottom: 0px; }</style>", unsafe_allow_html=True)
-st.image(ally_logo, use_column_width=False, width=150)
+st.markdown("<style>.logo { max-width: 200px; margin-bottom: 0px; }</style>", unsafe_allow_html=True)
+st.image(ally_logo, use_column_width=False, width=200)
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 st.header("Ally: Your Copilot!")
-st.markdown("<div class='bot-message'>Ally: Hi I am Ally! What's your name?</div>", unsafe_allow_html=True)
+st.markdown("<div class='bot-message'>Ally: Hey, I am Ally :) What's your name?</div>", unsafe_allow_html=True)
 
 # Chat Conversation
-user_input = st.text_input("You: Hi Ally my name is: ")
+user_input = st.text_input("You: ")
 
 if user_input:
     st.markdown(f"<div class='bot-message'>Ally: Hi {user_input}! I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
