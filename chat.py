@@ -55,16 +55,16 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
+st.header("Ally: Your Copilot!")
 # Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.markdown("<style>.logo { max-width: 200px; margin-bottom: 0px; }</style>", unsafe_allow_html=True)
-st.image(ally_logo, use_column_width=False, width=200)
+st.markdown("<style>.logo { max-width: 300px; margin-bottom: 0px; }</style>", unsafe_allow_html=True)
+st.image(ally_logo, use_column_width=False, width=300)
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-st.header("Ally: ABC Pharmaceuticals Copilot!")
+# st.header("Ally: Your Copilot!")
 
 st.markdown("<div class='bot-message'>Ally: Hey, I am Ally :) What's your name?</div>", unsafe_allow_html=True)
 
