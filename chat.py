@@ -69,7 +69,6 @@ st.markdown("<div class='bot-message'>Ally: Hey, I am Ally :) What's your name?<
 # User input field
 user_input = st.text_input("You:")
 if user_input:
-    st.markdown(f"<div class='user-message'>You: {user_input}</div>", unsafe_allow_html=True)
     st.markdown("<div class='bot-message'>Ally: Hi {user_input}!</div>", unsafe_allow_html=True)
     st.markdown("<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
 
