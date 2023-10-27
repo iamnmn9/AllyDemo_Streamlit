@@ -60,7 +60,8 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-st.markdown("<div class='header'>Ally: Your Copilot!</div>", unsafe_allow_html=True)
+st.markdown("<div class='header'>ALLY: YOUR COPILOT!</div>", unsafe_allow_html=True)
+st.markdown("<div class='header'>ABC Pharmaceuticals</div>", unsafe_allow_html=True)
 # Ally Logo
 
 ally_logo_path = "ally.png"
