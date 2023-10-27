@@ -13,7 +13,7 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #f2f2f2; /* Light grey background */
+        background-color: #8dcfe3; /* Light grey background */
     }
     .chat-container {
         display: flex;
