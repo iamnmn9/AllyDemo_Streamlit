@@ -44,13 +44,12 @@ st.markdown(
         text-align: left;
     }
      .logo {
-        max-width: 100%; /* Make the logo responsive */
-        margin-bottom: 1px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
     }
+            
     .header {
         text-align: center;
         font-size: 36px;
