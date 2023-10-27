@@ -61,14 +61,12 @@ st.image(ally_logo, use_column_width=False, width=150)
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 st.header("Ally: Your Copilot!")
 
-st.markdown("<div class='bot-message'>Ally: Hi I am Ally! What's your name?.</div>", unsafe_allow_html=True)
+st.markdown("<div class='bot-message'>Ally: Hi I am Ally! What's your name?</div>", unsafe_allow_html=True)
 # Chat Conversation
 user_input = st.text_input("You: ")
 
 if user_input:
-    st.markdown("<div class='bot-message'>Ally: Hi I am Ally! What's your name?.</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='user-message'>You: {user_input}</div>", unsafe_allow_html=True)
-    st.markdown("<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
-
+    st.markdown("<div class='bot-message'>Ally: Hi {user_input}! I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
+    
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
