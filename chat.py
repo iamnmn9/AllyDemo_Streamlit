@@ -21,8 +21,8 @@ st.markdown(
         align-items: center;
     }
     .chatbox {
-        border: 1px solid #cccccc; /* Grey border for chatbox */
-        border-radius: 10px;
+        border: 2px solid #8dcfe3; /* Grey border for chatbox */
+        border-radius: 12px;
         padding: 20px;
         margin-top: 20px;
         max-width: 500px;
@@ -30,7 +30,7 @@ st.markdown(
         background-color: #ffffff; /* White background for chatbox */
     }
     .user-message {
-        background-color: #f2f2f2; /* Grey background for user messages */
+        background-color: #e6a6ed; /* Grey background for user messages */
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
@@ -45,7 +45,7 @@ st.markdown(
     }
     .logo {
         max-width: 100%; /* Make the logo responsive */
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     </style>
     """,
@@ -55,8 +55,8 @@ st.markdown(
 # Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.markdown("<style>.logo { max-width: 150px; margin-bottom: 20px; }</style>", unsafe_allow_html=True)
-st.image(ally_logo, caption="Ally Logo", use_column_width=False, width=150)
+st.markdown("<style>.logo { max-width: 150px; margin-bottom: 10px; }</style>", unsafe_allow_html=True)
+st.image(ally_logo, use_column_width=False, width=150)
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
@@ -67,8 +67,9 @@ st.markdown("<div class='chatbox'>", unsafe_allow_html=True)
 user_input = st.text_input("You: ")
 
 if user_input:
-    st.markdown(f"<div class='user-message'>YOU: {user_input}</div>", unsafe_allow_html=True)
-    st.markdown("<div class='bot-message'>ALLY: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
+    st.markdown("<div class='bot-message'>Ally: Hi I am Ally! What's your name?.</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='user-message'>You: {user_input}</div>", unsafe_allow_html=True)
+    st.markdown("<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
