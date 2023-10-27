@@ -92,7 +92,7 @@ st.markdown("<div class='input-container'>", unsafe_allow_html=True)
 # user_input = st.text_input("You: ", class="input-field")
 user_input = st.text_input("You: ", key="input-field")
 
-submit_button = st.button("Send", class="submit-button")
+submit_button = st.button("Send", key="submit-button")
 st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
