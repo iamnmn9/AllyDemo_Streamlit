@@ -46,6 +46,8 @@ st.markdown(
     .logo {
         max-width: 100%; /* Make the logo responsive */
         margin-bottom: 1px;
+        align-items: center;
+        justify-content: center;
     }
     </style>
     """,
