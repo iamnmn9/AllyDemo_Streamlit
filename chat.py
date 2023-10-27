@@ -20,6 +20,7 @@ st.markdown(
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
+        text-align: center;
     }
     .header {
         text-align: center;
@@ -27,7 +28,7 @@ st.markdown(
         margin-bottom: 40px;
     }
     .chatbox {
-        border: 2px solid #8dcfe3; /* Light blue border for chatbox */
+        border: 1px solid #8dcfe3; /* Light blue border for chatbox */
         border-radius: 10px;
         padding: 20px;
         background-color: #ffffff; /* White background for chatbox */
@@ -80,6 +81,10 @@ st.markdown(
 
 # Ally Demo Page Content
 st.markdown("<div class='container'>", unsafe_allow_html=True)
+# Add ally.png without caption and centered
+ally_image_path = "ally.png"
+ally_image = Image.open(ally_image_path)
+st.image(ally_image, use_column_width=True, key="ally-image")
 st.markdown("<div class='header'>ALLY COPILOT DEMO</div>", unsafe_allow_html=True)
 
 # Chatbox
@@ -89,7 +94,9 @@ st.markdown("</div>", unsafe_allow_html=True)
 
 # User Input Form
 st.markdown("<div class='input-container'>", unsafe_allow_html=True)
+# user_input = st.text_input("You: ", class="input-field")
 user_input = st.text_input("You: ", key="input-field")
+
 submit_button = st.button("Send", key="submit-button")
 st.markdown("</div>", unsafe_allow_html=True)
 
