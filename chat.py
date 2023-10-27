@@ -44,7 +44,7 @@ st.markdown(
         text-align: left;
     }
      .logo {
-        max-width: 100%; /* Make the logo responsive */
+        # max-width: 100%; /* Make the logo responsive */
         margin-bottom: 1px;
         display: flex;
         align-items: center;
