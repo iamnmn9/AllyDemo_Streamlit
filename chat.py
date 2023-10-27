@@ -3,7 +3,7 @@ from PIL import Image
 
 # Page Configuration
 st.set_page_config(
-    page_title="ALLY COPILOT DEMO",
+    page_title="Ally: Your copilot",
     page_icon="🦋",
     layout="centered",  # Center the content
 )
@@ -27,10 +27,9 @@ st.markdown(
         margin-top: 20px;
         max-width: 500px;
         width: 100%;
-        background-color: #ffffff; /* White background for chatbox */
     }
     .user-message {
-        background-color: #e6a6ed; /* Grey background for user messages */
+        background-color:  #8dcfe3; /* Grey background for user messages */
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
