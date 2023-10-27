@@ -64,12 +64,11 @@ st.header("ALLY COPILOT DEMO")
 st.markdown("<div class='chatbox'>", unsafe_allow_html=True)
 
 # Chat Conversation
-user_input = st.text_input("You: ")
+user_name = st.text_input("Your Name:")
+user_company = st.text_input("Your Company:")
 
-if user_input:
-    st.markdown("<div class='bot-message'>Ally: Hi I am Ally! What's your name?.</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='user-message'>You: {user_input}</div>", unsafe_allow_html=True)
-    st.markdown("<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
+if user_name and user_company:
+    st.markdown("<div class='bot-message'>Ally: Hi, {} from {}! How can I assist you today?</div>".format(user_name, user_company), unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
