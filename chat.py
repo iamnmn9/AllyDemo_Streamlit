@@ -4,7 +4,7 @@ from PIL import Image
 # Page Configuration
 st.set_page_config(
     page_title="ALLY COPILOT DEMO",
-    page_icon="🤖",
+    page_icon="🦋",
     layout="centered",  # Center the content
 )
 
@@ -55,7 +55,8 @@ st.markdown(
 # Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.image(ally_logo, caption="Ally Logo", use_column_width=False, width=150, class="logo")
+st.markdown("<style>.logo { max-width: 150px; margin-bottom: 20px; }</style>", unsafe_allow_html=True)
+st.image(ally_logo, caption="Ally Logo", use_column_width=False, width=150)
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
