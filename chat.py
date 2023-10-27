@@ -50,12 +50,17 @@ st.markdown(
         align-items: center;
         justify-content: center;
     }
-
+    .header {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #8dcfe3; /* Light blue color for header */
+    }
     </style>
     """,
     unsafe_allow_html=True,
 )
-st.header("Ally: Your Copilot!")
+st.markdown("<div class='header'>Ally: Your Copilot!</div>", unsafe_allow_html=True)
 # Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
