@@ -12,7 +12,7 @@ st.set_page_config(
 st.title("ALLY Demo")
 
 # Open and Resize Image
-ally_image_path = "ally.jpeg"
+ally_image_path = "ally.png"
 ally_image = Image.open(ally_image_path)
 resized_ally_image = ally_image.resize((200, 200))  # Resize to 200x200 pixels
 
