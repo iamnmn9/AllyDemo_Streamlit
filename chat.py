@@ -91,10 +91,9 @@ st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 st.markdown("<div class='chatbox'>", unsafe_allow_html=True)
 
 # Chat Conversation
-user_input = st.text_input("You: ", class="input-field", key="user-input")
-submit_button = st.button("Send", key="submit-button")
+user_input = st.text_input("You: ", key="user-input")
 
-if user_input and submit_button:
+if st.button("Send", key="submit-button"):
     st.markdown("<div class='user-message'>You: {}</div>".format(user_input), unsafe_allow_html=True)
     st.markdown("<div class='bot-message'>Ally: Hi there! How can I assist you today?</div>", unsafe_allow_html=True)
 
