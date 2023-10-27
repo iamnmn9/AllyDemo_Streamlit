@@ -40,7 +40,7 @@ st.markdown(
 # Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.image(ally_logo, caption="Ally Logo", use_column_width=False, width=150, class="logo")
+st.image(ally_logo, caption="Ally Logo", use_column_width=False, width=150, key="logo")
 
 # Chatbox
 st.markdown("<div class='chatbox'>", unsafe_allow_html=True)
