@@ -45,7 +45,7 @@ st.markdown(
     }
      .logo {
           display: flex;
-          margin-left:10px;
+          margin-left:auto;
           margin-right: auto;
           width: 20%;
     }
@@ -60,7 +60,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-st.markdown("<div class='header'>ALLY: YOUR COPILOT!</div>", unsafe_allow_html=True)
+st.markdown("<div class='header'>A L L Y : Y O U R  C O P I L O T</div>", unsafe_allow_html=True)
 
 # Ally Logo
 
