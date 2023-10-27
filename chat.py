@@ -61,12 +61,12 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.markdown("<div class='header'>ALLY: YOUR COPILOT!</div>", unsafe_allow_html=True)
-st.markdown("<div class='header'>ABC Pharmaceuticals</div>", unsafe_allow_html=True)
+
 # Ally Logo
 
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.image(ally_logo, use_column_width=True, width=100)
+st.image(ally_logo, use_column_width=True, width=50)
 
 
 
