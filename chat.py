@@ -57,7 +57,7 @@ st.markdown(
 )
 
 # Ally Logo
-ally_logo_path = "ally.png"
+ally_logo_path = "all.gif"
 ally_logo = Image.open(ally_logo_path)
 st.markdown("<style>.logo { max-width: 500px; margin-bottom: 0px; }</style>", unsafe_allow_html=True)
 st.image(ally_logo, use_column_width=False, width=200)
