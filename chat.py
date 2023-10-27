@@ -84,14 +84,14 @@ st.markdown(
 # Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.image(ally_logo, use_column_width=False, width=150, class="logo")
+st.image(ally_logo, use_column_width=False, width=150, key="ally-logo")
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 st.markdown("<div class='chatbox'>", unsafe_allow_html=True)
 
 # Chat Conversation
-user_input = st.text_input("You: ", class="input-field")
+user_input = st.text_input("You: ", class="input-field", key="user-input")
 submit_button = st.button("Send", key="submit-button")
 
 if user_input and submit_button:
