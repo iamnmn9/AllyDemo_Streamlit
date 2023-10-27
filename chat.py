@@ -1,35 +1,39 @@
 import streamlit as st
-from PIL import Image
 
 # Page Configuration
 st.set_page_config(
     page_title="ALLY COPILOT DEMO",
     page_icon="🦋",
-    layout="centered",  # Center the content
+    layout="wide",  # Wide layout for the entire page
 )
 
-# Custom CSS for Chatbox Style
+# Custom CSS for Ally Demo Page
 st.markdown(
     """
     <style>
     body {
         background-color: #333333; /* Dark grey background */
+        color: white; /* White text color */
+        font-family: Arial, sans-serif; /* Font style */
     }
-    .chat-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 80vh;
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .header {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
     }
     .chatbox {
         border: 1px solid #8dcfe3; /* Light blue border for chatbox */
         border-radius: 10px;
         padding: 20px;
-        margin-top: 20px;
-        max-width: 500px;
-        width: 100%;
         background-color: #ffffff; /* White background for chatbox */
+        margin-bottom: 20px;
+        overflow-y: auto;
+        max-height: 400px; /* Set a max height for chatbox */
     }
     .user-message {
         background-color: #ffffff; /* White background for user messages */
@@ -45,32 +49,48 @@ st.markdown(
         margin-bottom: 10px;
         text-align: left;
     }
-    .logo {
-        max-width: 150px;
-        margin-bottom: 20px;
+    .input-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .input-field {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #8dcfe3;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .submit-button {
+        background-color: #8dcfe3; /* Light blue button background */
+        color: #333333; /* Dark grey button text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .submit-button:hover {
+        background-color: #6fa9cc; /* Darker blue on hover */
     }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-# Ally Logo
-ally_logo_path = "ally.png"
-ally_logo = Image.open(ally_logo_path)
-st.markdown("<style>.logo { max-width: 150px; margin-bottom: 20px; }</style>", unsafe_allow_html=True)
-st.image(ally_logo, use_column_width=False, width=150)
+# Ally Demo Page Content
+st.markdown("<div class='container'>", unsafe_allow_html=True)
+st.markdown("<div class='header'>ALLY COPILOT DEMO</div>", unsafe_allow_html=True)
 
 # Chatbox
-st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-st.header("ALLY COPILOT DEMO")
 st.markdown("<div class='chatbox'>", unsafe_allow_html=True)
-
-# Chat Conversation
-user_input = st.text_input("You: ")
-
-if user_input:
-    st.markdown(f"<div class='user-message'>YOU: {user_input}</div>", unsafe_allow_html=True)
-    st.markdown("<div class='bot-message'>ALLY: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
-
+# TODO: Add chat messages here
 st.markdown("</div>", unsafe_allow_html=True)
+
+# User Input Form
+st.markdown("<div class='input-container'>", unsafe_allow_html=True)
+user_input = st.text_input("You: ", class="input-field")
+submit_button = st.button("Send", class="submit-button")
+st.markdown("</div>", unsafe_allow_html=True)
+
 st.markdown("</div>", unsafe_allow_html=True)
