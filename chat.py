@@ -4,7 +4,7 @@ from PIL import Image
 # Page Configuration
 st.set_page_config(
     page_title="ALLY COPILOT DEMO",
-    page_icon="🦋",
+    page_icon="🤖",
     layout="centered",  # Center the content
 )
 
@@ -13,17 +13,15 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #333333; /* Dark grey background */
+        background-color: #f2f2f2; /* Light grey background */
     }
     .chat-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        height: 80vh;
     }
     .chatbox {
-        border: 1px solid #8dcfe3; /* Light blue border for chatbox */
+        border: 1px solid #cccccc; /* Grey border for chatbox */
         border-radius: 10px;
         padding: 20px;
         margin-top: 20px;
@@ -32,7 +30,7 @@ st.markdown(
         background-color: #ffffff; /* White background for chatbox */
     }
     .user-message {
-        background-color: #ffffff; /* White background for user messages */
+        background-color: #f2f2f2; /* Grey background for user messages */
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
@@ -58,7 +56,7 @@ st.markdown(
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
 st.markdown("<style>.logo { max-width: 150px; margin-bottom: 20px; }</style>", unsafe_allow_html=True)
-st.image(ally_logo, use_column_width=False, width=150)
+st.image(ally_logo, caption="Ally Logo", use_column_width=False, width=150)
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
