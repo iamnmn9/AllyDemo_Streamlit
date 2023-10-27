@@ -54,7 +54,7 @@ st.markdown(
         text-align: center;
         font-size: 36px;
         margin-bottom: 20px;
-        color: #8dcfe3; /* Light blue color for header */
+        color: #333333; /* Light blue color for header */
     }
     </style>
     """,
