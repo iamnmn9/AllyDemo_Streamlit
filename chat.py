@@ -85,7 +85,7 @@ st.markdown("<div class='container'>", unsafe_allow_html=True)
 # Add ally.png without caption and centered
 ally_image_path = "ally.png"
 ally_image = Image.open(ally_image_path)
-st.image(ally_image, use_column_width=True, key="ally-image")
+st.image(ally_image, use_column_width=True)
 st.markdown("<div class='header'>ALLY COPILOT DEMO</div>", unsafe_allow_html=True)
 
 # Chatbox
