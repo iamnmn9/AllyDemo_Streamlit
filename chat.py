@@ -5,7 +5,7 @@ from PIL import Image
 st.set_page_config(
     page_title="ALLY COPILOT DEMO",
     page_icon="🦋",
-    layout="wide",  # Wide layout for the entire page
+    layout="centered",  # Center the content
 )
 
 # Custom CSS for Chatbox Style
@@ -16,14 +16,14 @@ st.markdown(
         background-color: #f0f5f9; /* Light blue background */
         font-family: 'Arial', sans-serif;
     }
-    .chat-container {
+    .main-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100vh; /* 100% of the viewport height */
     }
-    .chatbox {
+    .chatbox-container {
         border: 2px solid #4caf50; /* Green border for chatbox */
         border-radius: 20px;
         padding: 30px;
@@ -43,17 +43,13 @@ st.markdown(
         word-wrap: break-word;
     }
     .bot-message {
-        background-color: #f9a825; /* Yellow background for Ally's messages */
+        background-color: #ff9800; /* Orange background for Ally's messages */
         padding: 10px 20px;
         border-radius: 25px;
         margin-bottom: 10px;
         text-align: left;
         max-width: 70%;
         word-wrap: break-word;
-    }
-    .logo {
-        max-width: 150px;
-        margin-bottom: 20px;
     }
     .input-field {
         width: 100%;
@@ -84,16 +80,16 @@ st.markdown(
 # Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.image(ally_logo, use_column_width=False, width=150, caption="Ally Logo")
+st.image(ally_logo, use_column_width=False, width=150)
 
-# Chatbox
-st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-st.markdown("<div class='chatbox'>", unsafe_allow_html=True)
+# Chatbox Container
+st.markdown("<div class='main-container'>", unsafe_allow_html=True)
+st.markdown("<div class='chatbox-container'>", unsafe_allow_html=True)
 
 # Chat Conversation
-user_input = st.text_input("You: ")
+user_input = st.text_input("You: ", class="input-field")
 
-if st.button("Send"):
+if st.button("Send", class="submit-button"):
     st.markdown("<div class='user-message'>You: {}</div>".format(user_input), unsafe_allow_html=True)
     st.markdown("<div class='bot-message'>Ally: Hi there! How can I assist you today?</div>", unsafe_allow_html=True)
 
