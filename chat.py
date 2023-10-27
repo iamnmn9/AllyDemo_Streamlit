@@ -62,11 +62,11 @@ st.markdown(
 )
 st.markdown("<div class='header'>Ally: Your Copilot!</div>", unsafe_allow_html=True)
 # Ally Logo
-st.markdown("<div class='logo'>")
+
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
 st.image(ally_logo, use_column_width=False, width=300)
-st.markdown("</div>")
+
 
 
 
