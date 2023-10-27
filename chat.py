@@ -8,14 +8,30 @@ st.set_page_config(
     layout="centered",  # Center the content
 )
 
-# Custom CSS for Page Title
+# Custom CSS for Chatbot Style
 st.markdown(
     """
     <style>
-    .title {
-        font-size: 40px;  /* Change the font size as desired */
-        font-weight: bold;
-        text-align: center;
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .user-message {
+        background-color: #e6f7ff;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        max-width: 70%;
+        text-align: left;
+    }
+    .bot-message {
+        background-color: #b3e0ff;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        max-width: 70%;
+        text-align: left;
     }
     </style>
     """,
@@ -34,32 +50,17 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Light Blue Box
-st.markdown(
-    """
-    <style>
-    .highlight {
-        border: 1px solid #b3e0ff;
-        border-radius: 10px;
-        padding: 20px;
-        background-color: #e6f7ff;
-        text-align: center;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Ally Image
 ally_image_path = "ally.png"
 ally_image = Image.open(ally_image_path)
 st.image(ally_image, use_column_width=True)
 
-# Ally Demo Text
-st.markdown("<div class='highlight'>", unsafe_allow_html=True)
-st.header("ALLY DEMO")
-name = st.text_input("Please enter your name:")
-if name:
-    st.success(f"Hello, {name}! Welcome to the Ally Demo!")
-st.markdown("</div>", unsafe_allow_html=True)
+# Chatbot Interaction
+st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
+st.markdown("<div class='bot-message'>ALLY: Hello there! I'm Ally, your virtual assistant. How can I assist you today?</div>", unsafe_allow_html=True)
+user_input = st.text_input("You: ")
 
+if user_input:
+    st.markdown(f"<div class='user-message'>YOU: {user_input}</div>", unsafe_allow_html=True)
+    st.markdown("<div class='bot-message'>ALLY: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
+st.markdown("</div>", unsafe_allow_html=True)
