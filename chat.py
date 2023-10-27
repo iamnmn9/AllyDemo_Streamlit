@@ -13,7 +13,7 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #333333; /* Light black background */
+        background-color: #b9e2eb; /* Light black background */
     }
     .chat-container {
         display: flex;
@@ -60,7 +60,7 @@ st.markdown(
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
 st.markdown("<style>.logo { max-width: 500px; margin-bottom: 0px; }</style>", unsafe_allow_html=True)
-st.image(ally_logo, use_column_width=False, width=300)
+st.image(ally_logo, use_column_width=False, width=200)
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
