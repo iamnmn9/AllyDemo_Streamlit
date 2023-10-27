@@ -59,7 +59,7 @@ st.image(ally_logo, use_column_width=False, width=150)
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-st.header("ALLY COPILOT DEMO")
+st.header("Ally: Your Copilot!")
 
 
 # Chat Conversation
