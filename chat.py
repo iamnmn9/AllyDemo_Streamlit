@@ -3,40 +3,74 @@ from PIL import Image
 
 # Page Configuration
 st.set_page_config(
-    page_title="ALLY COPILOT",
+    page_title="ALLY COPILOT DEMO",
     page_icon="🦋",
-    layout="wide",
+    layout="centered",  # Center the content
 )
 
-# App Title
-st.title("ALLY Demo")
-
-# Open and Resize Image
-ally_image_path = "ally.png"
-ally_image = Image.open(ally_image_path)
-resized_ally_image = ally_image.resize((200, 200))  # Resize to 200x200 pixels
-
-# Display Resized Image
-st.image(resized_ally_image, caption="Ally", use_column_width=True)
-
-# Light Blue Box
+# Custom CSS for Chatbox Style
 st.markdown(
     """
     <style>
-    .highlight {
-        border: 1px solid #b3e0ff;
+    body {
+        background-color: #333333; /* Dark grey background */
+    }
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+    }
+    .chatbox {
+        border: 1px solid #8dcfe3; /* Light blue border for chatbox */
         border-radius: 10px;
         padding: 20px;
-        background-color: #e6f7ff;
+        margin-top: 20px;
+        max-width: 500px;
+        width: 100%;
+        background-color: #ffffff; /* White background for chatbox */
+    }
+    .user-message {
+        background-color: #ffffff; /* White background for user messages */
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .bot-message {
+        background-color: #ffd1dc; /* Light pink background for Ally's messages */
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .logo {
+        max-width: 150px;
+        margin-bottom: 20px;
     }
     </style>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
-# Ask for Name
-st.markdown("<div class='highlight'>", unsafe_allow_html=True)
-name = st.text_input("Please enter your name:")
-if name:
-    st.success(f"Hello, {name}! Welcome to the Ally Demo!")
+# Ally Logo
+ally_logo_path = "ally.png"
+ally_logo = Image.open(ally_logo_path)
+st.markdown("<style>.logo { max-width: 150px; margin-bottom: 20px; }</style>", unsafe_allow_html=True)
+st.image(ally_logo, use_column_width=False, width=150)
+
+# Chatbox
+st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
+st.header("ALLY COPILOT DEMO")
+st.markdown("<div class='chatbox'>", unsafe_allow_html=True)
+
+# Chat Conversation
+user_input = st.text_input("You: ")
+
+if user_input:
+    st.markdown(f"<div class='user-message'>YOU: {user_input}</div>", unsafe_allow_html=True)
+    st.markdown("<div class='bot-message'>ALLY: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
+
+st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
