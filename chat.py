@@ -1,4 +1,4 @@
-import streamlit as st
+erimport streamlit as st
 from PIL import Image
 
 # Page Configuration
@@ -49,9 +49,10 @@ st.markdown(
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
     .header {
-        text-align: left;
+        text-align: center;
         font-size: 36px;
         margin-bottom: 20px;
         color: #333333; /* Light blue color for header */
