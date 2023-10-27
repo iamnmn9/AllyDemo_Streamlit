@@ -4,7 +4,7 @@ from PIL import Image
 # Page Configuration
 st.set_page_config(
     page_title="ALLY COPILOT DEMO",
-    page_icon="🤖",
+    page_icon="🦋",
     layout="centered",  # Center the content
 )
 
