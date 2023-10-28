@@ -66,7 +66,7 @@ st.markdown("<div class='header'>A L L Y : Y O U R    C O P I L O T</div>", unsa
 
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.image(ally_logo, use_column_width=True, width=50)
+st.image(ally_logo, use_column_width=False, width=50)
 
 
 
