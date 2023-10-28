@@ -106,8 +106,6 @@ if initial_user_input:
         email_input_key = f"email_input_{time.time()}"
         user_email = st.text_input(f"({initial_user_input}'s Email): ", key=email_input_key)
         
-        if user_email:
-            # User's additional message input
             st.markdown("<div class='bot-message'>Ally: Message/Query?</div>", unsafe_allow_html=True)
             additional_message_key = f"message_input_{time.time()}"
             additional_message = st.text_input(f"({initial_user_input}): ", key=additional_message_key)
