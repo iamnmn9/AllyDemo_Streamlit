@@ -101,15 +101,15 @@ if user_input:
         st.markdown("<div class='bot-message'>Ally: What is your work email?</div>", unsafe_allow_html=True)
         # Generate a unique key by concatenating the widget label with the current timestamp
         email_input_key = f"email_input_{time.time()}"
-        user_email = st.text_input(f"({user_input}): ", key=email_input_key)
-        if user_email:        
-            # User's additional message input
-            st.markdown("<div class='bot-message'>Ally: Message/Query?</div>", unsafe_allow_html=True)
-            additional_message_key = f"message_input_{time.time()}"
-            additional_message = st.text_input(f"({user_input}): ", key=additional_message_key)
-            if additional_message:
-                st.markdown(f"<div class='bot-message'>Ally: Thanks for your message: {additional_message}</div>", unsafe_allow_html=True)
-                st.markdown("<div class='bot-message'>Ally: We will get back to you soon.</div>", unsafe_allow_html=True)
+        user_email = st.text_input(f"({user_input}'s Email): ", key=email_input_key)
+        
+        # User's additional message input
+        st.markdown("<div class='bot-message'>Ally: Message/Query?</div>", unsafe_allow_html=True)
+        additional_message_key = f"message_input_{time.time()}"
+        additional_message = st.text_input(f"({user_input}): ", key=additional_message_key)
+        if additional_message and user_email:
+            st.markdown(f"<div class='bot-message'>Ally: Thanks for your message: {additional_message}</div>", unsafe_allow_html=True)
+            st.markdown("<div class='bot-message'>Ally: We will get back to you soon.</div>", unsafe_allow_html=True)
 
 # user_input = st.text_input("You: ")
 
