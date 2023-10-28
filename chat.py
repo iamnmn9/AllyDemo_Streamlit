@@ -78,11 +78,13 @@ st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 st.markdown("<div class='bot-message'>Ally: Hey, I am Ally :) What's your name?</div>", unsafe_allow_html=True)
 
 # Chat Conversation
-user_input = st.text_input("You: ")
+user_input1 = st.text_input("You: ")
 
-if user_input:
-    st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
+if user_input1:
+    st.markdown(f"<div class='bot-message'>Ally: Hey {user_input1} :) </div>", unsafe_allow_html=True)
     st.markdown(f"<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
+    
+
 
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
