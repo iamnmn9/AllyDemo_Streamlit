@@ -47,7 +47,7 @@ st.markdown(
           display: flex;
           margin-left:auto;
           margin-right: auto;
-          width: 20%;
+          width: 30%;
     }
             
     .header {
