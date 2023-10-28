@@ -82,9 +82,13 @@ user_input1 = st.text_input("You: ")
 
 if user_input1:
     st.markdown(f"<div class='bot-message'>Ally: Hey {user_input1} :) </div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
-    
-
+    st.markdown(f"<div class='bot-message'>Ally:To get started, I need to ask you some questions about your business.</div>", unsafe_allow_html=True)
+# Button in Chat
+st.markdown("<div class='button-container'>", unsafe_allow_html=True)
+if st.button("Click Me!"):
+    st.markdown("<div class='bot-message'>Ally: Button Clicked!</div>", unsafe_allow_html=True)
+st.markdown("</div>", unsafe_allow_html=True)
+# user_input2 = st.text_input("You: ")
 
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
