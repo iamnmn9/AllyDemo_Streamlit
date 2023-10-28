@@ -60,7 +60,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-st.markdown("<div class='header'>A L L Y : Y O U R    C O P I L O T</div>", unsafe_allow_html=True)
+st.markdown("<div class='header'>A L L Y : Y O U R   C O P I L O T</div>", unsafe_allow_html=True)
 
 # Ally Logo
 
