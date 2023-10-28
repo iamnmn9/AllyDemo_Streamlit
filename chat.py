@@ -56,6 +56,17 @@ st.markdown(
         margin-bottom: 20px;
         color: #333333; /* Light blue color for header */
     }
+   .button-style {
+    background-color: #8dcfe3; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    .button-style:hover {
+        background-color: #76b8d4; /* Button background color on hover */
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -82,7 +93,10 @@ user_input = st.text_input("You: ")
 
 if user_input:
     st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
-
+    st.markdown(f"<div class='bot-message'>Ally: To get started, I need to ask you some questions about your business.</div>", unsafe_allow_html=True)
+# Button in Chat
+st.markdown("<div class='button-container'>", unsafe_allow_html=True)
+if st.button("Click Me!"):
+    st.markdown("<div class='bot-message'>Ally: Sounds Good!</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
