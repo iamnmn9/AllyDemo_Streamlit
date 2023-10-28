@@ -105,9 +105,9 @@ if user_input:
         if user_email:
             st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
         
-        # User's additional message input
-        additional_message_key = f"message_input_{time.time()}"
-        additional_message = st.text_input("You (Message): ", key=additional_message_key)
+            # User's additional message input
+            additional_message_key = f"message_input_{time.time()}"
+            additional_message = st.text_input("You (Message): ", key=additional_message_key)
             if additional_message:
                 st.markdown(f"<div class='bot-message'>Ally: Thanks for your message: {additional_message}</div>", unsafe_allow_html=True)
                 st.markdown("<div class='bot-message'>Ally: We will get back to you soon.</div>", unsafe_allow_html=True)
