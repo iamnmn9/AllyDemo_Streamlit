@@ -42,14 +42,22 @@ st.markdown(
         border-radius: 10px;
         margin-bottom: 10px;
         text-align: left;
+        color: #333333; /* Light blue color for Ally's messages */
     }
-     .logo {
+    .bot-question {
+        background-color: #ffd1dc; /* Light pink background for Ally's questions */
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+        color: #333333; /* Light blue color for Ally's questions */
+    }
+    .logo {
           display: flex;
           margin-left:auto;
           margin-right: auto;
           width: 30%;
     }
-            
     .header {
         text-align: center;
         font-size: 36px;
@@ -70,14 +78,14 @@ st.image(ally_logo, use_column_width=True, width=50)
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 
-user_name = st.text_input("Ally: Hey, I am Ally :) What's your name?")
+user_name = st.text_input("Ally: Hey, I am Ally :) What's your name?", key="name")
 
 if user_name:
-    organization = st.text_input("Ally: What's the name of your organization?")
+    organization = st.text_input("Ally: What's the name of your organization?", key="organization")
     if organization:
-        email = st.text_input("Ally: What's your email address?")
+        email = st.text_input("Ally: What's your email address?", key="email")
         if email:
-            message = st.text_area("Ally: How can I assist you?")
+            message = st.text_area("Ally: How can I assist you?", key="message")
             if message:
                 st.markdown(f"<div class='bot-message'>Ally: Thank you, {user_name} from {organization}, for your message! We'll contact you at {email} about: {message}</div>", unsafe_allow_html=True)
 
