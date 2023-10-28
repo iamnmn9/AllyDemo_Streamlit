@@ -101,6 +101,7 @@ if user_input:
     if st.button("Sounds Good!"):
         st.markdown("<div class='bot-message'>Ally: What is your work email?</div>", unsafe_allow_html=True)
         # Generate a unique key by concatenating the widget label with the current timestamp
+        
         email_input_key = f"email_input_{time.time()}"
         user_email = st.text_input(f"({user_input}'s Email): ", key=email_input_key)
         
