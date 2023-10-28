@@ -97,6 +97,6 @@ if user_input:
 # Button in Chat
 st.markdown("<div class='button-container'>", unsafe_allow_html=True)
 if st.button("Click Me!"):
-    st.markdown("<div class='bot-message'>Ally: Sounds Good!</div>", unsafe_allow_html=True)
+    st.markdown("<div class='bot-message'>Ally: What is your work email?</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
