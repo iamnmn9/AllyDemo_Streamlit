@@ -88,7 +88,7 @@ st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 
 st.markdown("<div class='bot-message'>Ally: Hey, I am Ally :) What's your name?</div>", unsafe_allow_html=True)
 
-
+import time  # Import the time module to get the current timestamp
 
 user_input = st.text_input("You: ")
 
@@ -98,9 +98,24 @@ if user_input:
     # Button in Chat
     if st.button("Sounds Good!"):
         st.markdown("<div class='bot-message'>Ally: What is your work email?</div>", unsafe_allow_html=True)
-        user_email = st.text_input("You: ")
+        # Generate a unique key by concatenating the widget label with the current timestamp
+        email_input_key = f"email_input_{time.time()}"
+        user_email = st.text_input("You (Email): ", key=email_input_key)
         if user_email:
             st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
+
+
+# user_input = st.text_input("You: ")
+
+# if user_input:
+#     st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
+#     st.markdown("<div class='bot-message'>Ally: To get started, I need to ask you some questions about your business.</div>", unsafe_allow_html=True)
+#     # Button in Chat
+#     if st.button("Sounds Good!"):
+#         st.markdown("<div class='bot-message'>Ally: What is your work email?</div>", unsafe_allow_html=True)
+#         user_email = st.text_input("You: ")
+#         if user_email:
+#             st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
 
 
 
