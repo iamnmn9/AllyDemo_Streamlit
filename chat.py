@@ -63,19 +63,26 @@ st.markdown(
 st.markdown("<div class='header'>ALLY : YOUR COPILOT</div>", unsafe_allow_html=True)
 
 # Ally Logo
+
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
 st.image(ally_logo, use_column_width=True, width=50)
+
+
+
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 # st.header("Ally: Your Copilot!")
 
 st.markdown("<div class='bot-message'>Ally: Hey, I am Ally :) What's your name?</div>", unsafe_allow_html=True)
+
+# Chat Conversation
 user_input = st.text_input("You: ")
 
 if user_input:
-    st.markdown(f"<div class='user-message'>You: {user_input}</div>", unsafe_allow_html=True)
-    st.markdown("<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
 
+st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
