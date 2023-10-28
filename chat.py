@@ -106,12 +106,12 @@ if initial_user_input:
         email_input_key = f"email_input_{time.time()}"
         user_email = st.text_input(f"({initial_user_input}'s Email): ", key=email_input_key)
         
-            st.markdown("<div class='bot-message'>Ally: Message/Query?</div>", unsafe_allow_html=True)
-            additional_message_key = f"message_input_{time.time()}"
-            additional_message = st.text_input(f"({initial_user_input}): ", key=additional_message_key)
-            if additional_message:
-                st.markdown(f"<div class='bot-message'>Ally: Thanks for your message: {additional_message}</div>", unsafe_allow_html=True)
-                st.markdown("<div class='bot-message'>Ally: We will get back to you soon.</div>", unsafe_allow_html=True)
+        st.markdown("<div class='bot-message'>Ally: Message/Query?</div>", unsafe_allow_html=True)
+        additional_message_key = f"message_input_{time.time()}"
+        additional_message = st.text_input(f"({initial_user_input}): ", key=additional_message_key)
+        if additional_message:
+            st.markdown(f"<div class='bot-message'>Ally: Thanks for your message: {additional_message}</div>", unsafe_allow_html=True)
+            st.markdown("<div class='bot-message'>Ally: We will get back to you soon.</div>", unsafe_allow_html=True)
 
 # user_input = st.text_input("You: ")
 
