@@ -64,11 +64,24 @@ st.markdown("<div class='header'>ALLY : YOUR COPILOT</div>", unsafe_allow_html=T
 
 # Ally Logo
 
+# ally_logo_path = "ally.png"
+# ally_logo = Image.open(ally_logo_path)
+# st.image(ally_logo, use_column_width=True, width=50)
+
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.image(ally_logo, use_column_width=True, width=50)
 
+# Define the maximum size for the thumbnail
+max_size = (100, 100)  # Adjust the width and height according to your preference
 
+# Create a thumbnail of the image
+ally_logo.thumbnail(max_size)
+
+# Specify the width for the displayed image
+custom_width = 50  # Adjust this value according to your preference
+
+# Display the thumbnail image with the specified width
+st.image(ally_logo, use_column_width=True, width=custom_width)
 
 
 
