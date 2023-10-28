@@ -43,7 +43,23 @@ st.markdown(
         margin-bottom: 10px;
         text-align: left;
     }
-     .logo {
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .button-style {
+        background-color: #8dcfe3; /* Button background color */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button-style:hover {
+        background-color: #76b8d4; /* Button background color on hover */
+    }
+    .logo {
           display: flex;
           margin-left:auto;
           margin-right: auto;
@@ -63,32 +79,25 @@ st.markdown(
 st.markdown("<div class='header'>ALLY : YOUR COPILOT</div>", unsafe_allow_html=True)
 
 # Ally Logo
-
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
 st.image(ally_logo, use_column_width=True, width=50)
-
-
-
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 # st.header("Ally: Your Copilot!")
 
 st.markdown("<div class='bot-message'>Ally: Hey, I am Ally :) What's your name?</div>", unsafe_allow_html=True)
+user_input = st.text_input("You: ")
 
-# Chat Conversation
-user_input1 = st.text_input("You: ")
+if user_input:
+    st.markdown(f"<div class='user-message'>You: {user_input}</div>", unsafe_allow_html=True)
+    st.markdown("<div class='bot-message'>Ally: I'm here to help! Feel free to ask me anything.</div>", unsafe_allow_html=True)
 
-if user_input1:
-    st.markdown(f"<div class='bot-message'>Ally: Hey {user_input1} :) </div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='bot-message'>Ally:To get started, I need to ask you some questions about your business.</div>", unsafe_allow_html=True)
 # Button in Chat
 st.markdown("<div class='button-container'>", unsafe_allow_html=True)
-if st.button("Click Me!"):
+if st.button("Click Me!", key="my_button"):
     st.markdown("<div class='bot-message'>Ally: Button Clicked!</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
-# user_input2 = st.text_input("You: ")
 
-st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
