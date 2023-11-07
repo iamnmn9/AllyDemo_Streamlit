@@ -81,7 +81,7 @@ st.markdown("<div class='header'>ALLY : YOUR COPILOT</div>", unsafe_allow_html=T
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
 st.markdown("<div class='logo'>", unsafe_allow_html=True)
-st.image(ally_logo, use_column_width=True)
+st.image(ally_logo, use_column_width=False)
 st.markdown("</div>", unsafe_allow_html=True)
 
 
