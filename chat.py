@@ -48,8 +48,8 @@ st.markdown(
         justify-content: center;
     }
     .logo img {
-        width: 150px;  /* Adjust the width to set the logo to passport photo size */
-        height: 150px; /* Adjust the height to maintain aspect ratio */
+        width: 50px;  /* Adjust the width to set the logo to passport photo size */
+        height: 50px; /* Adjust the height to maintain aspect ratio */
     }
             
     .header {
