@@ -43,11 +43,13 @@ st.markdown(
         margin-bottom: 10px;
         text-align: left;
     }
-     .logo {
-          display: flex;
-          margin-left:auto;
-          margin-right: auto;
-          width: 30%;
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    .logo img {
+        width: 150px;  /* Adjust the width to set the logo to passport photo size */
+        height: 150px; /* Adjust the height to maintain aspect ratio */
     }
             
     .header {
@@ -75,11 +77,12 @@ st.markdown("<div class='header'>ALLY : YOUR COPILOT</div>", unsafe_allow_html=T
 
 # Ally Logo
 
+# Ally Logo
 ally_logo_path = "ally.png"
 ally_logo = Image.open(ally_logo_path)
-st.image(ally_logo, use_column_width=True, width=50)
-
-
+st.markdown("<div class='logo'>", unsafe_allow_html=True)
+st.image(ally_logo, use_column_width=True)
+st.markdown("</div>", unsafe_allow_html=True)
 
 
 # Chatbox
