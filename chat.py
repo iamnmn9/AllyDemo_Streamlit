@@ -52,7 +52,7 @@ st.markdown(
         height: 50px; /* Adjust the height to maintain aspect ratio */
     }
     .logo-top-left {
-        position: absolute;
+        position: left;
         top: 20px;
         left: 20px;
     }
