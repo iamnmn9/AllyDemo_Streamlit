@@ -51,7 +51,11 @@ st.markdown(
         width: 50px;  /* Adjust the width to set the logo to passport photo size */
         height: 50px; /* Adjust the height to maintain aspect ratio */
     }
-            
+    .logo-top-left {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
     .header {
         text-align: center;
         font-size: 36px;
@@ -73,7 +77,17 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+# Logo at the top left
+logo_top_left_path = "fly.png"
+logo_top_left = Image.open(logo_top_left_path)
+st.markdown("<div class='logo-top-left'>", unsafe_allow_html=True)
+st.image(logo_top_left, use_column_width=False)
+st.markdown("</div>", unsafe_allow_html=True)
+
+# Header
 st.markdown("<div class='header'>ALLY : YOUR COPILOT</div>", unsafe_allow_html=True)
+
 
 # Ally Logo
 
@@ -116,32 +130,6 @@ if initial_user_input:
             st.markdown(f"<div class='bot-message'>Ally: Thanks for your message: {additional_message}</div>", unsafe_allow_html=True)
             st.markdown("<div class='bot-message'>Ally: We will get back to you soon.</div>", unsafe_allow_html=True)
 
-# user_input = st.text_input("You: ")
-
-# if user_input:
-#     st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
-#     st.markdown("<div class='bot-message'>Ally: To get started, I need to ask you some questions about your business.</div>", unsafe_allow_html=True)
-#     # Button in Chat
-#     if st.button("Sounds Good!"):
-#         st.markdown("<div class='bot-message'>Ally: What is your work email?</div>", unsafe_allow_html=True)
-#         user_email = st.text_input("You: ")
-#         if user_email:
-#             st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
-
-
-
-# Chat Conversation
-# user_input = st.text_input("You: ")
-
-# if user_input:
-#     st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
-#     st.markdown(f"<div class='bot-message'>Ally: To get started, I need to ask you some questions about your business.</div>", unsafe_allow_html=True)
-# # Button in Chat
-#     st.markdown("<div class='button-container'>", unsafe_allow_html=True)
-#     if st.button("Sounds Good!"):
-#         st.markdown("<div class='bot-message'>Ally: What is your work email?</div>", unsafe_allow_html=True)
-#         user_input1 = st.text_input({user_input}:" ")
-#         st.markdown(f"<div class='bot-message'>Ally: Hey {user_input} :) </div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
