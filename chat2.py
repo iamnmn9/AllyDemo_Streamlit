@@ -90,7 +90,7 @@ st.markdown("<div class='header'>ALLY : YOUR COPILOT</div>", unsafe_allow_html=T
 logo_top_left_path = "ally.png"
 logo_top_left = Image.open(logo_top_left_path)
 st.markdown("<div class='logo-top-left'>", unsafe_allow_html=True)
-st.image(logo_top_left, use_column_width=False)
+st.image(logo_top_left, use_column_width=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Header
@@ -122,12 +122,12 @@ if initial_user_name:
                 st.markdown(f"<div class='bot-message'>Ally: Got it! Feel free to ask any questions or share your thoughts.</div>", unsafe_allow_html=True)
                 
 # User input and OpenAI response
-user_input = st.text_input("You: ")
+user_input1 = st.text_input("You: ")
 
-if user_input:
+if user_input1:
     completions = openai.Completion.create(
         engine="text-davinci-003",
-        prompt=user_input,
+        prompt=user_input1,
         max_tokens=1024,
         n=1,
         stop=None,
@@ -136,7 +136,7 @@ if user_input:
     output = completions.choices[0].text.lstrip("\n")
 
     # Store the output
-    st.markdown(f"<div class='user-message'>You: {user_input}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='user-message'>You: {user_input1}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='bot-message'>Ally: {output}</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
