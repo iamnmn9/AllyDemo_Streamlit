@@ -4,8 +4,7 @@ from streamlit_chat import message
 from PIL import Image
 import time
 
-# Set your OpenAI API key
-openai_api_key = st.secrets["openai_api_key"]["key"]
+
 
 # Page Configuration
 st.set_page_config(
@@ -123,7 +122,8 @@ if initial_user_name:
                 
                 # User input and OpenAI response
                 user_input1 = st.text_input("You:", key="input1")
-                
+                # Set your OpenAI API key
+                openai_api_key = st.secrets["openai_api_key"]["key"]
                 if user_input1:
                     completions = openai.Completion.create(
                         engine="text-davinci-003",
