@@ -12,6 +12,7 @@ st.set_page_config(
     page_title="Ally Demo",
     page_icon=="🦋",
     layout="centered",
+    
 )
 
 # Custom CSS for Chatbox Style
