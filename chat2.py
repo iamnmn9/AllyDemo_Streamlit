@@ -122,7 +122,7 @@ if initial_user_name:
                 st.markdown(f"<div class='bot-message'>Ally: Got it! Feel free to ask any questions or share your thoughts.</div>", unsafe_allow_html=True)
                 
 # User input and OpenAI response
-user_input1 = st.text_input("You: ")
+user_input1 = st.text_input("You (Input 1):", key="input1")
 
 if user_input1:
     completions = openai.Completion.create(
