@@ -5,7 +5,7 @@ from PIL import Image
 import time
 
 # Set your OpenAI API key
-openai.api_key = "YOUR_API_KEY"
+openai_api_key = st.secrets["openai_api_key"]["key"]
 
 # Page Configuration
 st.set_page_config(
