@@ -10,11 +10,10 @@ openai_api_key = st.secrets["openai_api_key"]["key"]
 # Page Configuration
 st.set_page_config(
     page_title="Ally Demo",
-    page_icon=="🦋",
+    page_icon="🦋",
     layout="centered",
-    
 )
-
+ 
 # Custom CSS for Chatbox Style
 st.markdown(
     """
