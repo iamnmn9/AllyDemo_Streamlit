@@ -32,7 +32,7 @@ st.image(logo_top_left, use_column_width=False)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Header
-st.markdown("<div class='header'>Ally CoPilot Demo</div>", unsafe_allow_html=True)
+st.markdown("<div class='header'>ALLY COPILOT DEMO</div>", unsafe_allow_html=True,use_column_width=True)
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
