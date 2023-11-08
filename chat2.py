@@ -121,23 +121,23 @@ if initial_user_name:
             if user_primary_goal:
                 st.markdown(f"<div class='bot-message'>Ally: Got it! Feel free to ask any questions or share your thoughts.</div>", unsafe_allow_html=True)
                 
-# User input and OpenAI response
-user_input1 = st.text_input("You (Input 1):", key="input1")
-
-if user_input1:
-    completions = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=user_input1,
-        max_tokens=1024,
-        n=1,
-        stop=None,
-        temperature=0.5,
-    )
-    output = completions.choices[0].text.lstrip("\n")
-
-    # Store the output
-    st.markdown(f"<div class='user-message'>You: {user_input1}</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='bot-message'>Ally: {output}</div>", unsafe_allow_html=True)
+                # User input and OpenAI response
+                user_input1 = st.text_input("You:", key="input1")
+                
+                if user_input1:
+                    completions = openai.Completion.create(
+                        engine="text-davinci-003",
+                        prompt=user_input1,
+                        max_tokens=1024,
+                        n=1,
+                        stop=None,
+                        temperature=0.5,
+                    )
+                    output = completions.choices[0].text.lstrip("\n")
+                
+                    # Store the output
+                    st.markdown(f"<div class='user-message'>You: {user_input1}</div>", unsafe_allow_html=True)
+                    st.markdown(f"<div class='bot-message'>Ally: {output}</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
