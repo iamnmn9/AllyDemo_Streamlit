@@ -10,7 +10,7 @@ openai_api_key = st.secrets["openai_api_key"]["key"]
 # Page Configuration
 st.set_page_config(
     page_title="Ally Demo",
-    page_icon="🤖",
+    page_icon=="🦋",
     layout="centered"
 )
 
@@ -18,11 +18,72 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Your CSS styles here */
+    body {
+        background-color: #333333; /* Light black background */
+    }
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .chatbox {
+        border: 2px solid #8dcfe3; /* Grey border for chatbox */
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 20px;
+        max-width: 500px;
+        width: 100%;
+    }
+    .user-message {
+        background-color:  #b9e2eb; /* Grey background for user messages */
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .bot-message {
+        background-color: #ffd1dc; /* Light pink background for Ally's messages */
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    .logo img {
+        width: 50px;  /* Adjust the width to set the logo to passport photo size */
+        height: 50px; /* Adjust the height to maintain aspect ratio */
+    }
+    .logo-top-left {
+        position: left;
+        top: 20px;
+        left: 20px;
+    }
+    .header {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #333333; /* Light blue color for header */
+    }
+   .button-style {
+    background-color: #8dcfe3; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    .button-style:hover {
+        background-color: #76b8d4; /* Button background color on hover */
+    }
     </style>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
+
 st.markdown("<div class='header'>ALLY : YOUR COPILOT</div>", unsafe_allow_html=True)
 
 # Logo at the top left
