@@ -83,13 +83,13 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.markdown("<div class='header'>ALLY : YOUR COPILOT</div>", unsafe_allow_html=True)
+st.markdown("<div class='header'>ALLY : YOUR COPILOT (DEMO)</div>", unsafe_allow_html=True)
 
 # Logo at the top left
 logo_top_left_path = "ally.png"
 logo_top_left = Image.open(logo_top_left_path)
 st.markdown("<div class='logo-top-left'>", unsafe_allow_html=True)
-st.image(logo_top_left, use_column_width=True)
+st.image(logo_top_left, use_column_width=False)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Header
