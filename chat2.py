@@ -53,8 +53,8 @@ st.markdown(
         justify-content: center;
     }
     .logo img {
-        width: 50px;  /* Adjust the width to set the logo to passport photo size */
-        height: 50px; /* Adjust the height to maintain aspect ratio */
+        width: 20px;  /* Adjust the width to set the logo to passport photo size */
+        height: 20px; /* Adjust the height to maintain aspect ratio */
     }
     .logo-top-left {
         position: left;
