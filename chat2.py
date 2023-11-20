@@ -35,10 +35,13 @@ st.markdown(
         width: 100%;
     }
     /* Other CSS styles remain unchanged */
+    
     .logo-top-left {
-        width: 10%; /* Adjust the width as a percentage for responsiveness */
-        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
+
 
     .user-message {
         background-color:  #b9e2eb; /* Grey background for user messages */
@@ -82,7 +85,7 @@ st.markdown("<div class='header'>ALLY : YOUR COPILOT (DEMO)</div>", unsafe_allow
 logo_top_left_path = "smally50.png"
 logo_top_left = Image.open(logo_top_left_path)
 st.markdown("<div class='logo-top-left'>", unsafe_allow_html=True)
-st.image(logo_top_left, use_column_width=True)
+st.image(logo_top_left, use_column_width=False)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Header
