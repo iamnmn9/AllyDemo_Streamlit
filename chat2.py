@@ -58,7 +58,7 @@ st.markdown(
         text-align: left;
     }
     .header {
-        text-align: center;
+        text-align: left;
         font-size: 36px;
         margin-bottom: 20px;
         color: #333333; /* Light blue color for header */
