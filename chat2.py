@@ -1,5 +1,4 @@
 import streamlit as st
-import openai
 from PIL import Image
 
 # Page Configuration
@@ -9,13 +8,13 @@ st.set_page_config(
     layout="wide",
 )
 
-# Custom CSS for Chatbox Style
+# Custom CSS for Facebook-like Theme
 st.markdown(
     """
     <style>
     body {
         font-family: 'Arial', sans-serif;
-        background-color: #F4F4F4; /* Light gray background */
+        background-color: #f0f2f5; /* Light grayish-blue background similar to Facebook */
         margin: 0;
         padding: 0;
     }
@@ -23,7 +22,7 @@ st.markdown(
         text-align: center;
         font-size: 48px;
         margin-bottom: 20px;
-        color: #333333; /* Dark blue color for header */
+        color: #1877f2; /* Facebook blue color for the header */
     }
     .chat-container {
         display: flex;
@@ -33,18 +32,17 @@ st.markdown(
         padding: 20px;
     }
     .chatbox {
-        border: 2px solid #8dcfe3;
+        border: 1px solid #dddfe2; /* Light border color */
         border-radius: 12px;
         padding: 20px;
         margin-top: 20px;
         max-width: 800px;
         width: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #FFFFFF; /* White chatbox background */
+        background-color: #ffffff; /* White chatbox background */
     }
     .user-message {
-        background-color: #b9e2eb; /* Light blue background for user messages */
-        color: #333333; /* Dark blue text color for user messages */
+        background-color: #e9f0f4; /* Light blue background for user messages */
+        color: #1c1e21; /* Dark text color */
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
@@ -52,8 +50,8 @@ st.markdown(
         width: 70%;
     }
     .bot-message {
-        background-color: #ffd1dc; /* Light pink background for Ally's messages */
-        color: #333333; /* Dark pink text color for Ally's messages */
+        background-color: #ffffff; /* White background for Ally's messages */
+        color: #1c1e21; /* Dark text color */
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
@@ -65,7 +63,7 @@ st.markdown(
         margin-bottom: 20px;
     }
     .button-style {
-        background-color: #8dcfe3; /* Light blue button color */
+        background-color: #1877f2; /* Facebook blue button color */
         color: white;
         border: none;
         padding: 10px 20px;
@@ -74,7 +72,7 @@ st.markdown(
         transition: background-color 0.3s ease-in-out;
     }
     .button-style:hover {
-        background-color: #76b8d4; /* Darker blue on button hover */
+        background-color: #0e5a8a; /* Darker blue on button hover */
     }
     .logo-top-left {
         width: 100px; /* Adjust the width of the logo */
