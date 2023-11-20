@@ -1,75 +1,85 @@
 import streamlit as st
 import openai
-from streamlit_chat import message
 from PIL import Image
-import time
-
-
 
 # Page Configuration
 st.set_page_config(
     page_title="Ally Demo",
     page_icon="🦋",
-    layout="centered",
+    layout="wide",
 )
+
+# Custom CSS for Chatbox Style
 st.markdown(
     """
     <style>
     body {
-        background-color: #FFFFFF; /* Set the background to white for light mode */
+        font-family: 'Arial', sans-serif;
+        background-color: #F4F4F4; /* Light gray background */
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #333333; /* Dark blue color for header */
     }
     .chat-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        max-width: 100%; /* Adjust for responsiveness */
-        padding: 10px; /* Add padding for better spacing */
+        padding: 20px;
     }
     .chatbox {
         border: 2px solid #8dcfe3;
         border-radius: 12px;
         padding: 20px;
         margin-top: 20px;
-        max-width: 500px;
+        max-width: 800px;
         width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #FFFFFF; /* White chatbox background */
     }
-    /* Other CSS styles remain unchanged */
-    .logo-top-left {
-        width: 10%; /* Adjust the width as a percentage for responsiveness */
-        height: auto;
-    }
-
     .user-message {
-        background-color:  #b9e2eb; /* Grey background for user messages */
+        background-color: #b9e2eb; /* Light blue background for user messages */
+        color: #333333; /* Dark blue text color for user messages */
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
         text-align: left;
+        width: 70%;
     }
     .bot-message {
         background-color: #ffd1dc; /* Light pink background for Ally's messages */
+        color: #333333; /* Dark pink text color for Ally's messages */
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
         text-align: left;
+        width: 70%;
     }
-    .header {
-        text-align: center;
-        font-size: 36px;
+    .input-box {
+        width: 70%;
         margin-bottom: 20px;
-        color: #333333; /* Light blue color for header */
     }
-   .button-style {
-    background-color: #8dcfe3; /* Button background color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    .button-style {
+        background-color: #8dcfe3; /* Light blue button color */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
     }
     .button-style:hover {
-        background-color: #76b8d4; /* Button background color on hover */
+        background-color: #76b8d4; /* Darker blue on button hover */
+    }
+    .logo-top-left {
+        width: 100px; /* Adjust the width of the logo */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px;
     }
     </style>
     """,
@@ -81,12 +91,7 @@ st.markdown("<div class='header'>ALLY : YOUR COPILOT (DEMO)</div>", unsafe_allow
 # Logo at the top left
 logo_top_left_path = "ally.png"
 logo_top_left = Image.open(logo_top_left_path)
-st.markdown("<div class='logo-top-left'>", unsafe_allow_html=True)
-st.image(logo_top_left, use_column_width=False)
-st.markdown("</div>", unsafe_allow_html=True)
-
-# Header
-# st.markdown("<div class='header'>ALLY COPILOT DEMO</div>", unsafe_allow_html=True)
+st.image(logo_top_left, use_column_width=False, caption="Ally Logo", format="PNG", output_format="PNG")
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
