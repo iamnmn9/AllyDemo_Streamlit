@@ -59,8 +59,8 @@ st.markdown(
     }
     .header {
         text-align: left;
-        font-size: 36px;
-        margin-bottom: 20px;
+        font-size: 30px;
+        margin-bottom: 10px;
         color: #333333; /* Light blue color for header */
     }
    .button-style {
