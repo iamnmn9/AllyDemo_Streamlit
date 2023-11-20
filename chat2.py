@@ -91,7 +91,7 @@ st.markdown("<div class='header'>ALLY : YOUR COPILOT (DEMO)</div>", unsafe_allow
 # Logo at the top left
 logo_top_left_path = "ally.png"
 logo_top_left = Image.open(logo_top_left_path)
-st.image(logo_top_left, use_column_width=False, caption="Ally Logo", format="PNG", output_format="PNG")
+st.image(logo_top_left, use_column_width=False, caption="Ally Logo")
 
 # Chatbox
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
