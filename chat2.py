@@ -1,5 +1,10 @@
 import streamlit as st
+import openai
+from streamlit_chat import message
 from PIL import Image
+import time
+
+
 
 # Page Configuration
 st.set_page_config(
@@ -7,7 +12,6 @@ st.set_page_config(
     page_icon="🦋",
     layout="centered",
 )
-
 st.markdown(
     """
     <style>
@@ -22,16 +26,26 @@ st.markdown(
         max-width: 100%; /* Adjust for responsiveness */
         padding: 10px; /* Add padding for better spacing */
     }
+    .chatbox {
+        border: 2px solid #8dcfe3;
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 20px;
+        max-width: 500px;
+        width: 100%;
+    }
     /* Other CSS styles remain unchanged */
     .logo-top-left {
-        width: 50%; /* Adjust the width as a percentage for responsiveness */
+        width: 10%; /* Adjust the width as a percentage for responsiveness */
         height: auto;
     }
-    .header {
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: #333333; /* Light blue color for header */
+
+    .user-message {
+        background-color:  #b9e2eb; /* Grey background for user messages */
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: left;
     }
     .bot-message {
         background-color: #ffd1dc; /* Light pink background for Ally's messages */
@@ -39,6 +53,23 @@ st.markdown(
         border-radius: 10px;
         margin-bottom: 10px;
         text-align: left;
+    }
+    .header {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #333333; /* Light blue color for header */
+    }
+   .button-style {
+    background-color: #8dcfe3; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    .button-style:hover {
+        background-color: #76b8d4; /* Button background color on hover */
     }
     </style>
     """,
@@ -50,10 +81,9 @@ st.markdown("<div class='header'>ALLY : YOUR COPILOT (DEMO)</div>", unsafe_allow
 # Logo at the top left
 logo_top_left_path = "ally.png"
 logo_top_left = Image.open(logo_top_left_path)
-st.image(logo_top_left, width=0.5, caption="Ally Logo")
-
-# Chatbox section - Keep the rest of your code for the chat here
-# ...
+st.markdown("<div class='logo-top-left'>", unsafe_allow_html=True)
+st.image(logo_top_left, use_column_width=False)
+st.markdown("</div>", unsafe_allow_html=True)
 
 # Header
 # st.markdown("<div class='header'>ALLY COPILOT DEMO</div>", unsafe_allow_html=True)
