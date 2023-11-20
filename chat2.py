@@ -58,9 +58,10 @@ st.markdown(
     # }
     .logo-top-left {
         position: center;
-        width: 20px;  /* Adjust the width to set the logo to passport photo size */
-        height: 20px; /* Adjust the height to maintain aspect ratio */
+        width: 100px; /* Adjust the width to set the logo size */
+        height: auto; /* Let the height adjust to maintain aspect ratio */
     }
+
     .header {
         text-align: center;
         font-size: 36px;
