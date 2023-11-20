@@ -12,28 +12,34 @@ st.set_page_config(
     page_icon="🦋",
     layout="centered",
 )
- 
-# Custom CSS for Chatbox Style
 st.markdown(
     """
     <style>
     body {
-        background-color: #333333; /* Light black background */
+        background-color: #FFFFFF; /* Set the background to white for light mode */
     }
     .chat-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        max-width: 100%; /* Adjust for responsiveness */
+        padding: 10px; /* Add padding for better spacing */
     }
     .chatbox {
-        border: 2px solid #8dcfe3; /* Grey border for chatbox */
+        border: 2px solid #8dcfe3;
         border-radius: 12px;
         padding: 20px;
         margin-top: 20px;
         max-width: 500px;
         width: 100%;
     }
+    /* Other CSS styles remain unchanged */
+    .logo-top-left {
+        width: 10%; /* Adjust the width as a percentage for responsiveness */
+        height: auto;
+    }
+
     .user-message {
         background-color:  #b9e2eb; /* Grey background for user messages */
         padding: 10px;
@@ -48,20 +54,6 @@ st.markdown(
         margin-bottom: 10px;
         text-align: left;
     }
-    # .logo {
-    #     display: flex;
-    #     justify-content: center;
-    # }
-    # .logo img {
-    #     width: 20px;  /* Adjust the width to set the logo to passport photo size */
-    #     height: 20px; /* Adjust the height to maintain aspect ratio */
-    # }
-    .logo-top-left {
-        position: center;
-        width: 20px; /* Adjust the width to set the logo size */
-        height: auto; /* Let the height adjust to maintain aspect ratio */
-    }
-
     .header {
         text-align: center;
         font-size: 36px;
