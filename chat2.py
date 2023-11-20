@@ -58,7 +58,7 @@ st.markdown(
     # }
     .logo-top-left {
         position: center;
-        width: 100px; /* Adjust the width to set the logo size */
+        width: 20px; /* Adjust the width to set the logo size */
         height: auto; /* Let the height adjust to maintain aspect ratio */
     }
 
