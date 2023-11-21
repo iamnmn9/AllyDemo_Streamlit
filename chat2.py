@@ -84,7 +84,9 @@ if initial_user_name:
 
             if user_primary_goal:
                 st.markdown(f"<div class='bot-message'>Ally: Got it! Feel free to ask any questions or share your thoughts.</div>", unsafe_allow_html=True)
-                
+                # Store chat data to the text file
+                chat_data = [f"You: {user_input1}", f"Ally: {output}"]
+                store_chat_data(initial_user_name, chat_data)
                 user_input1 = st.text_input("You:", key="input1")
                 openai_api_key = st.secrets["openai_api_key"]["key"]
                 if user_input1:
@@ -100,9 +102,7 @@ if initial_user_name:
                     st.markdown(f"<div class='user-message'>You: {user_input1}</div>", unsafe_allow_html=True)
                     st.markdown(f"<div class='bot-message'>Ally: {output}</div>", unsafe_allow_html=True)
                     
-                    # Store chat data to the text file
-                    chat_data = [f"You: {user_input1}", f"Ally: {output}"]
-                    store_chat_data(initial_user_name, chat_data)
+
 
 st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
