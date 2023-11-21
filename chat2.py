@@ -61,7 +61,7 @@ st.markdown(
         text-align: left;
         font-size: 36px;
         margin-bottom: 20px;
-        color: #00FFFF; /* Adjusted blue color for header */
+        color: #2C3539; /* Adjusted blue color for header */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding a subtle text shadow */
     }
 
