@@ -106,7 +106,7 @@ if initial_user_name:
 
     # Add your initial questions for the user here
     user_business_name = st.text_input("Your Business Name: ")
-    user_business_email = st.text_input("Business Email: ")
+    user_business_email = st.text_input("Email: ")
     
     if user_business_name and user_business_email:
         st.markdown(f"<div class='bot-message'>Ally: Great! Tell me more about {user_business_name}. What do you do?</div>", unsafe_allow_html=True)
