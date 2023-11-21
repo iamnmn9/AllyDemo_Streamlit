@@ -43,6 +43,8 @@ st.markdown(
         display: block;
         margin-left: auto;
         margin-right: auto;
+        align-items: center;
+
     }
     .header {
         text-align: left;
