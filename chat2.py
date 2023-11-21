@@ -82,7 +82,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.markdown("<div class='header'>ALLY : YOUR COPILOT (DEMO)</div>", unsafe_allow_html=True)
+st.markdown("<div class='header'>ALLY : Your Copilot [Demo]</div>", unsafe_allow_html=True)
 
 # Logo at the top left
 logo_top_left_path = "smally50.png"
