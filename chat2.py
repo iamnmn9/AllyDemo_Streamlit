@@ -46,6 +46,20 @@ st.markdown(
         align-items: center;
 
     }
+    .user-message {
+        background-color:  #b9e2eb; /* Grey background for user messages */
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .bot-message {
+        background-color: #ffd1dc; /* Light pink background for Ally's messages */
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
     .header {
         text-align: left;
         font-size: 36px;
