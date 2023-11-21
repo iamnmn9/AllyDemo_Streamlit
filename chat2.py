@@ -58,11 +58,13 @@ st.markdown(
         text-align: left;
     }
     .header {
-        text-align: left;
-        font-size: 30px;
-        margin-bottom: 10px;
-        color: #333333; /* Light blue color for header */
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #1a73e8; /* Adjusted blue color for header */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding a subtle text shadow */
     }
+
    .button-style {
     background-color: #8dcfe3; /* Button background color */
     color: white;
