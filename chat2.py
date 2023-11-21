@@ -11,15 +11,18 @@ st.set_page_config(
 )
 
 # Function to store chat data for each user in a text file
-def store_chat_data(user_name, chat_data):
+def store_chat_data(user_name, business_name, email):
     directory = "user_chats"
     if not os.path.exists(directory):
         os.makedirs(directory)
     
     filename = f"{directory}/{user_name}_chat.txt"
     with open(filename, "a") as file:
-        for chat_line in chat_data:
-            file.write(chat_line + "\n")
+        file.write(f"Name: {user_name}\n")
+        file.write(f"Business Name: {business_name}\n")
+        file.write(f"Email: {email}\n")
+        file.write("\n")
+
 
 st.markdown(
     """
@@ -78,15 +81,22 @@ if initial_user_name:
         st.markdown(f"<div class='bot-message'>Ally: Great! Tell me more about {user_business_name}. What do you do?</div>", unsafe_allow_html=True)
         user_business_description = st.text_input(f"{user_business_name}'s Description: ")
         
+        if initial_user_name and user_business_name and user_business_email:
+            store_chat_data(initial_user_name, user_business_name, user_business_email)
+
         if user_business_description:
             st.markdown(f"<div class='bot-message'>Ally: Thanks for sharing. What's your primary goal, {initial_user_name}?</div>", unsafe_allow_html=True)
             user_primary_goal = st.text_input(f"{initial_user_name}'s Primary Goal: ")
 
             if user_primary_goal:
                 st.markdown(f"<div class='bot-message'>Ally: Got it! Feel free to ask any questions or share your thoughts.</div>", unsafe_allow_html=True)
+
+                
                 # Store chat data to the text file
                 chat_data = [f"You: {user_input1}", f"Ally: {output}"]
                 store_chat_data(initial_user_name, chat_data)
+
+                
                 user_input1 = st.text_input("You:", key="input1")
                 openai_api_key = st.secrets["openai_api_key"]["key"]
                 if user_input1:
