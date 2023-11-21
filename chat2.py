@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import openai
 from PIL import Image
-
+import config
 # Page Configuration
 st.set_page_config(
     page_title="Ally Demo",
